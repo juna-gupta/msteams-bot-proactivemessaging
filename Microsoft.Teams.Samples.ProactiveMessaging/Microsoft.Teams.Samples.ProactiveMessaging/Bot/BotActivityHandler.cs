@@ -7,6 +7,8 @@ namespace Microsoft.Teams.Samples.ProactiveMessaging.Bot
     using Microsoft.Bot.Builder;
     using Microsoft.Bot.Builder.Teams;
     using Microsoft.Bot.Schema;
+    using Microsoft.Bot.Schema.Teams;
+    using System.Collections.Generic;
 
     /// <summary>
     /// Teams Bot Activity Handler.
@@ -27,6 +29,16 @@ namespace Microsoft.Teams.Samples.ProactiveMessaging.Bot
             // Echo back
             var replyText = $"Echo: {turnContext.Activity.Text}";
             await turnContext.SendActivityAsync(MessageFactory.Text(replyText, replyText), cancellationToken);
+        }
+
+        protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> teamsMembersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+        {
+            return base.OnTeamsMembersAddedAsync(teamsMembersAdded, teamInfo, turnContext, cancellationToken);
+        }
+
+        protected override Task OnConversationUpdateActivityAsync(ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+        {
+            return base.OnConversationUpdateActivityAsync(turnContext, cancellationToken);
         }
     }
 }

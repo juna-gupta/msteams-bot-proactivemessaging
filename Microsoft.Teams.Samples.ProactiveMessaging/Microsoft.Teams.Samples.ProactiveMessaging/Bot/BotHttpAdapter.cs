@@ -31,7 +31,7 @@ namespace Microsoft.Teams.Samples.ProactiveMessaging.Bot
                 // Azure Application Insights. Visit https://aka.ms/bottelemetry to see how
                 // to add telemetry capture to your bot.
                 var errorMessage = exception.Message;
-                logger.LogError(exception, $"[OnTurnError] unhandled error : {errorMessage}", errorMessage);
+                logger.LogError(exception, "[OnTurnError] unhandled error : {errorMessage}", errorMessage);
 
                 // Send a message to the user
                 await turnContext.SendActivityAsync("The bot encountered an error or bug.");
