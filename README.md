@@ -27,9 +27,9 @@ To set up the sample app code, follow these steps:
 5. Run the .NET project in an IDE (like Visual Studio) or `dotnet run`.
 6. Use a tunneling solution like ngrok and point it to port 7111: `ngrok http -host-header=rewrite 7111` 
 
-Make sure to copy and save the HTTPS URL (it should look like https://<randomsubdomain>.ngrok.io).
+Make sure to copy and save the HTTPS URL (it should look like `https://<randomsubdomain>.ngrok.io`).
 
-7. Update the bot messaging endpoint in the Azure bot registration to the ngrok URL with messaging endpoint. (ex. https://<randomsubdomain>.ngrok.io/api/messages)
+7. Update the bot messaging endpoint in the Azure bot registration to the ngrok URL with messaging endpoint. (ex. `https://<randomsubdomain>.ngrok.io/api/messages`)
 
 ## Prepare the application package
 
