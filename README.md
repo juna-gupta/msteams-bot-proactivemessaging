@@ -20,7 +20,14 @@ Clone the repository
 
 To set up the sample app code, follow these steps:
 
-1. Create an Azure bot registration and connect it to Teams Channel.
+1. Create an Azure bot registration and connect it to Teams Channel. [Learn More](https://learn.microsoft.com/en-us/microsoftteams/platform/bots/what-are-bots)
+
+> Note: Bot registration should be done in
+> * Azure Commercial (https://portal.azure.com) for Commercial and GCC environments.
+> * Azure Government (https://portal.azure.us) for GCCH and DOD environments.
+>
+> [Learn more](https://learn.microsoft.com/en-us/azure/bot-service/how-to-deploy-gov-cloud-high?view=azure-bot-service-4.0&tabs=csharp).
+
 2. Create an application secret for the app registered in step 1. Copy the App Id and App Secret.
 3. Rename the app settings file for the desired environment to 'AppSettings.json' (Example for GCCH, rename AppSettingsGCCH.json to AppSettings.json)
 4. Update the Microsoft App Id and App Secret in the app settings file.
